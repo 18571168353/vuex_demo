@@ -3,8 +3,13 @@ import App from './App.vue'
 import Vuex from 'vuex'
 
 Vue.config.productionTip = false
-const store = new Vuex.Store()
 Vue.use(Vuex)
+const store = new Vuex.Store({
+	state: {
+		// 管理数据
+		count: 0
+	}
+})
 new Vue({
 	render: (h) => h(App),
 	store
